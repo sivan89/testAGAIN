@@ -1,4 +1,4 @@
-name: Runners
+name: 08 - Runners
 
 on:
   workflow_dispatch:
@@ -8,9 +8,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Inspect the Linux runner
+      - name: Test output
         run: |
-          echo "OS       : $RUNNER_OS"
-          echo "Arch     : $RUNNER_ARCH"
-          echo "Home     : $HOME"
-          echo "Temp dir : $RUNNER_TEMP"
+          echo "================================"
+          echo "Hello from GitHub Actions!"
+          echo "================================"
+          echo "OS       = $RUNNER_OS"
+          echo "ARCH     = $RUNNER_ARCH"
+          echo "HOME     = $HOME"
+          echo "TEMP     = $RUNNER_TEMP"
+          echo "WORKSPACE = $GITHUB_WORKSPACE"
+          echo "================================"
