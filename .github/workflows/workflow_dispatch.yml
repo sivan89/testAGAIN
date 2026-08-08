@@ -1,14 +1,16 @@
-name: Runners
+name: 08 - Runners
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
 
 jobs:
   linux-job:
-    runs-on: ubuntu-latest      # most common + fastest + cheapest
+    runs-on: ubuntu-latest
+
     steps:
       - name: Inspect the Linux runner
         run: |
-          echo "OS       : $RUNNER_OS"          # -> Linux
-          echo "Arch     : $RUNNER_ARCH"        # -> X64
+          echo "OS       : $RUNNER_OS"
+          echo "Arch     : $RUNNER_ARCH"
           echo "Home     : $HOME"
           echo "Temp dir : $RUNNER_TEMP"
