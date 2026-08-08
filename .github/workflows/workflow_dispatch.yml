@@ -8,14 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Test output
+      - name: Inspect Linux runner
         run: |
-          echo "================================"
-          echo "Hello from GitHub Actions!"
-          echo "================================"
-          echo "OS       = $RUNNER_OS"
-          echo "ARCH     = $RUNNER_ARCH"
-          echo "HOME     = $HOME"
-          echo "TEMP     = $RUNNER_TEMP"
-          echo "WORKSPACE = $GITHUB_WORKSPACE"
-          echo "================================"
+          echo "OS       : $RUNNER_OS" >> "$GITHUB_STEP_SUMMARY"
+          echo "Arch     : $RUNNER_ARCH" >> "$GITHUB_STEP_SUMMARY"
+          echo "Home     : $HOME" >> "$GITHUB_STEP_SUMMARY"
+          echo "Temp dir : $RUNNER_TEMP" >> "$GITHUB_STEP_SUMMARY"
