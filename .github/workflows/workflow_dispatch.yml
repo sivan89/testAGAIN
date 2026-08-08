@@ -1,16 +1,14 @@
 name: 08 - Runners
 
-on:
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
   linux-job:
-    runs-on: ubuntu-latest
-
+    runs-on: ubuntu-latest      # most common + fastest + cheapest
     steps:
-      - name: Inspect Linux runner
+      - name: Inspect the Linux runner
         run: |
-          echo "OS       : $RUNNER_OS" >> "$GITHUB_STEP_SUMMARY"
-          echo "Arch     : $RUNNER_ARCH" >> "$GITHUB_STEP_SUMMARY"
-          echo "Home     : $HOME" >> "$GITHUB_STEP_SUMMARY"
-          echo "Temp dir : $RUNNER_TEMP" >> "$GITHUB_STEP_SUMMARY"
+          echo "OS       : $RUNNER_OS"          # -> Linux
+          echo "Arch     : $RUNNER_ARCH"        # -> X64
+          echo "Home     : $HOME"
+          echo "Temp dir : $RUNNER_TEMP"
