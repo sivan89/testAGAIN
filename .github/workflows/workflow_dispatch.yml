@@ -1,4 +1,4 @@
-name: 08 - Runners
+name: Runners
 
 on:
   workflow_dispatch:
