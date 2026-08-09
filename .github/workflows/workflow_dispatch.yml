@@ -12,4 +12,5 @@ jobs:
           echo "Arch     : $RUNNER_ARCH"        # -> X64
           echo "Home     : $HOME"
           echo "Temp dir : $RUNNER_TEMP"
-          echo "Date     : $(date)"
+          echo "UTC Date : $(date)"
+          echo "IST Date : $(TZ=Asia/Kolkata date '+%Y-%m-%d %H:%M:%S %Z')"
